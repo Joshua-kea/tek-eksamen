@@ -1,0 +1,9 @@
+# Ting der sjældent ændrer sig - øverst
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+
+# Ting der ofte ændrer sig - nederst
+COPY . .
+CMD ["node", "server.js"]
