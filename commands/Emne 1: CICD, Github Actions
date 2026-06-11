@@ -1,0 +1,27 @@
+# CI/CD og GitHub Actions
+
+## Workflows
+`github.com/joshua-kea/tek-eksamen` → Actions
+
+## Kør manuelt
+Actions → `maven.yml` → Run workflow
+
+## Workflow-filer
+`github.com/joshua-kea/tek-eksamen/blob/main/.github/workflows/ci.yml`
+`github.com/joshua-kea/tek-eksamen/blob/main/.github/workflows/maven.yml`
+
+## Hash-pinning
+```yaml
+uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+```
+
+## Caching
+```yaml
+- name: Cache Maven packages
+  uses: actions/cache@v4
+  with:
+    path: ~/.m2
+    key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+    restore-keys: |
+      ${{ runner.os }}-maven-
+```
