@@ -13,12 +13,16 @@ cat dekrypteret.txt
 
 /GPG/
 
-gpg --list-keys
 gpg --full-generate-key
-echo "hemmelig besked" > besked.txt
-gpg --output besked.gpg --encrypt --recipient <din-email> besked.txt
-gpg --output dekrypteret.txt --decrypt besked.gpg
-cat dekrypteret.txt
+# Vælg: 1, 2048, 0, y, Test, test@test.com, O, test, Take this one anyway
+
+echo "Hej dette er en hemmelig besked" > besked.txt
+gpg --encrypt --armor -r "Test" besked.txt
+
+cat besked.txt.asc
+
+gpg --decrypt besked.txt.asc
+
 
 /SSH-nøglepar/
 
