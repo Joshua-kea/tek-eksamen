@@ -1,0 +1,37 @@
+LINUX-TERMINALEN
+================
+
+SSH
+ssh azureuser@4.235.113.102
+
+Mapper og filer
+mkdir testmappe
+cd testmappe
+cd ..
+ls
+ls -la
+pwd
+echo "hej verden" > fil.txt
+nano fil.txt
+cat fil.txt
+
+Søg i filer
+cat fil.txt
+head -5 fil.txt
+tail -5 fil.txt
+less fil.txt
+grep "søgeord" fil.txt
+
+Pipe og redirect
+ls -la | grep ".txt"
+ls -la > liste.txt
+ls -la >> liste.txt
+
+Filrettigheder
+ls -la
+chmod 755 fil.txt
+chmod +x fil.sh
+
+SCP
+scp fil.txt azureuser@4.235.113.102:~/
+scp azureuser@4.235.113.102:~/fil.txt .
