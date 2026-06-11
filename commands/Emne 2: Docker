@@ -1,0 +1,22 @@
+DOCKER
+======
+
+docker ps
+docker ps -a
+docker start <navn>
+docker stop <navn>
+docker rm <navn>
+
+docker build -t mit-image .
+docker run -it mit-image
+docker run -d -p 8080:80 mit-image
+
+docker images
+docker rmi mit-image
+docker image prune
+docker system prune
+
+docker compose up
+docker compose up -d
+docker compose down
+docker compose logs
