@@ -4,8 +4,10 @@ CLOUD
 ssh azureuser@4.235.113.102
 
 /Firewall-regler/
+
 portal.azure.com → VM → Networking → Network security group
 
-Docker på VM
+/Docker på VM/
+
 docker ps
 docker images
