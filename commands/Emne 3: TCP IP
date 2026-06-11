@@ -17,7 +17,8 @@ ping ek.dk
 ipconfig /release
 ipconfig /renew
 
-curl til handshake-demo
+/curl til handshake-demo/
+
 curl http://4.235.113.102
 
 /WireShark-filtre/
@@ -25,6 +26,4 @@ curl http://4.235.113.102
 ip.addr == 4.235.113.102
 ip.addr == 195.254.168.52
 tcp
-dhcp
-tcp.flags.syn == 1
-tcp.flags.fin == 1
+dhcp (ipconfig)
