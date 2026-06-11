@@ -3,6 +3,9 @@ CLOUD
 
 ssh azureuser@4.235.113.102
 
+docker pull ghcr.io/joshua-kea/tek-eksamen:latest
+docker run
+
 /Firewall-regler/
 
 portal.azure.com → VM → Networking → Network security group
