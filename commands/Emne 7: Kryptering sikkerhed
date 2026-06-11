@@ -1,17 +1,18 @@
 KRYPTERING OG SIKKERHED
 ========================
 
-SSH til VM
 ssh azureuser@4.235.113.102
 
-openssl - symmetrisk kryptering
+/openssl - symmetrisk kryptering/
+
 echo "Dette er en hemmelig besked" > hemmelig.txt
 openssl enc -aes-256-cbc -salt -pbkdf2 -in hemmelig.txt -out hemmelig.enc
 cat hemmelig.enc
 openssl enc -aes-256-cbc -d -pbkdf2 -in hemmelig.enc -out dekrypteret.txt
 cat dekrypteret.txt
 
-GPG
+/GPG/
+
 gpg --list-keys
 gpg --full-generate-key
 echo "hemmelig besked" > besked.txt
@@ -19,21 +20,26 @@ gpg --output besked.gpg --encrypt --recipient <din-email> besked.txt
 gpg --output dekrypteret.txt --decrypt besked.gpg
 cat dekrypteret.txt
 
-SSH-nøglepar
+/SSH-nøglepar/
+
 ssh-keygen -t ed25519 -C "test-nøgle"
 ls -la ~/.ssh/
 cat ~/.ssh/id_ed25519.pub
 
-Certifikat
+/Certifikat/
+
 openssl s_client -connect ek.dk:443
 
-WireShark - TLS handshake
+/WireShark - TLS handshake/
+
 ip.addr == 195.254.168.52
 
-SSH tunnel
+/SSH tunnel/
+
 ssh -L 8080:localhost:80 azureuser@4.235.113.102
 http://localhost:8080
 
-WireGuard
+/WireGuard/
+
 sudo docker exec wg-client ping -c 3 10.13.13.1
 sudo docker exec wg-server wg show
