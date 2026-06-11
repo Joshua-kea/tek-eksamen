@@ -30,7 +30,6 @@ ls -la >> liste.txt
 Filrettigheder
 ls -la
 chmod 755 fil.txt
-chmod +x fil.sh
 
 SCP
 scp fil.txt azureuser@4.235.113.102:~/
