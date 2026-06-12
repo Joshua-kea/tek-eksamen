@@ -12,7 +12,6 @@ dnschecker.org → ek.dk → A
 /WireShark-filtre/
 
 ip.addr == 4.235.113.102
-http
 
 /DevTools/
 
