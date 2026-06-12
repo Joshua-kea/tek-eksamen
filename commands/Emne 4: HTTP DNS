@@ -3,12 +3,10 @@ DNS OG HTTP
 
 nslookup
 nslookup ek.dk
-nslookup -type=MX ek.dk
-nslookup -type=NS ek.dk
 
 
 /dig/
-dnschecker.org
+
 dnschecker.org → ek.dk → A
 
 /WireShark-filtre/
